@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
                 ),
               ),
               Text(
-                'Devera',
+                'Yeye',
                 style: TextStyle(
                     fontFamily: 'AvenirNextRoundedPro',
                     fontSize: 48.0,
