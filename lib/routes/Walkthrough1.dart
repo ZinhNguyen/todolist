@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:cupertino_icons/cupertino_icons.dart';
 
 class WalkThrough1 extends StatelessWidget {
 
@@ -10,7 +12,7 @@ class WalkThrough1 extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Padding(
-            padding: const EdgeInsets.all(0.0),
+            padding: const EdgeInsets.all(20.0),
             child: Image.asset('images/walkthrough_1_1.png'),
           ),
           Column(
@@ -33,11 +35,44 @@ class WalkThrough1 extends StatelessWidget {
                   ),
                 ),
               ),
+              SizedBox(
+                height: 10.0,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    CupertinoIcons.circle_fill,
+                    color: Color(0xFF000000),
+                    size: 8.0,
+                  ),
+                  Padding(
+                      padding: EdgeInsets.only(top: 48.0, right: 8.0),
+                  ),
+                  Icon(
+                    CupertinoIcons.circle_fill,
+                    color: Color(0xFFCCCCCC),
+                    size: 8.0,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(top: 48.0, right: 8.0),
+                  ),
+                  Icon(
+                    CupertinoIcons.circle_fill,
+                    color: Color(0xFFCCCCCC),
+                    size: 8.0,
+                  ),
+                ],
+              ),
             ],
           ),
-           Image(
-               image: AssetImage('images/walkthrough_1_2.png'),
+          Container(
+            alignment: Alignment.center,
+           child: Image.asset(
+               'images/walkthrough_1_2.png',
+             alignment: Alignment.center,
            ),
+          ),
         ],
       ),
     );
