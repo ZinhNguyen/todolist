@@ -7,12 +7,13 @@ import 'package:nhinh_uit_devera/routes/tasks_screen.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: WalkThrough1(),
+      initialRoute: WalkThrough.id,
+      routes: {
+        WalkThrough.id: (context) => WalkThrough(),
+      },
     );
   }
 }
-

@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:cupertino_icons/cupertino_icons.dart';
+import 'package:assorted_layout_widgets/assorted_layout_widgets.dart';
 
 class WalkThrough1 extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,7 +12,7 @@ class WalkThrough1 extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Padding(
-            padding: const EdgeInsets.all(20.0),
+            padding: const EdgeInsets.only(top: 60.0),
             child: Image.asset('images/walkthrough_1_1.png'),
           ),
           Column(
@@ -47,7 +47,7 @@ class WalkThrough1 extends StatelessWidget {
                     size: 8.0,
                   ),
                   Padding(
-                      padding: EdgeInsets.only(top: 48.0, right: 8.0),
+                    padding: EdgeInsets.only(top: 48.0, right: 8.0),
                   ),
                   Icon(
                     CupertinoIcons.circle_fill,
@@ -66,12 +66,11 @@ class WalkThrough1 extends StatelessWidget {
               ),
             ],
           ),
-          Container(
-            alignment: Alignment.center,
-           child: Image.asset(
-               'images/walkthrough_1_2.png',
-             alignment: Alignment.center,
-           ),
+          Expanded(
+            child: Image.asset(
+              'images/walkthrough_1_2.png',
+              fit: BoxFit.fill,
+            ),
           ),
         ],
       ),
