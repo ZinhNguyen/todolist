@@ -1,7 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:cupertino_icons/cupertino_icons.dart';
-import 'package:assorted_layout_widgets/assorted_layout_widgets.dart';
 
 class WalkThrough1 extends StatelessWidget {
   @override
@@ -67,10 +65,55 @@ class WalkThrough1 extends StatelessWidget {
             ],
           ),
           Expanded(
-            child: Image.asset(
-              'images/walkthrough_1_2.png',
-              fit: BoxFit.fill,
-            ),
+            child: Container(
+                padding: EdgeInsets.symmetric(horizontal: 30.0),
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('images/walkthrough_1_2.png'),
+                    fit: BoxFit.fill,
+                  ),
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    SizedBox(
+                      height: 20.0,
+                    ),
+                    TextButton(
+                      style: TextButton.styleFrom(
+                        backgroundColor: Colors.white,
+                        padding: EdgeInsets.all(13.0),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(5.0)),
+                      ),
+                      child: Text(
+                        'Get Started',
+                        style: TextStyle(
+                          color: Color(0xFF313131),
+                          fontSize: 18.0,
+                        ),
+                      ),
+                      onPressed: () {},
+                    ),
+                    SizedBox(
+                      height: 20.0,
+                    ),
+                    Center(
+                      child: TextButton(
+                        style: TextButton.styleFrom(),
+                        child: Text(
+                          'Log In',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18.0,
+                          ),
+                        ),
+                        onPressed: () {},
+                      ),
+                    ),
+                  ],
+                )),
           ),
         ],
       ),
