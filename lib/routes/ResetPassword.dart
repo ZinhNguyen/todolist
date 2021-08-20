@@ -1,11 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../widgets/top_login.dart';
-import '../widgets/username_login.dart';
 import '../widgets/password_login.dart';
 import '../widgets/button.dart';
 
-class SignIn extends StatelessWidget {
+class ResetPassword extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,41 +17,30 @@ class SignIn extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             TopLogin(
-              title: 'Welcome back',
-              content: 'Sign in to continue',
+              title: 'Reset Password',
+              content:
+                  'Reset codee was sent to your phone. Please enter the code and create new password',
             ),
-            Username(
-              title: 'Username',
-              hinttext: 'hungnm@devera.vn',
+            Password(
+              passtitle: 'Reset code',
+              passhint: 'Enter your password',
+              height: 38.0,
               onChange: (value) {},
             ),
             Password(
-              passtitle: 'Password',
+              passtitle: 'New password',
               passhint: 'Enter your password',
-              height: 0.0,
+              height: 38.0,
               onChange: (value) {},
             ),
-            SizedBox(
-              height: 12.0,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Text(
-                  'Forgot password',
-                  style: TextStyle(
-                    fontSize: 18.0,
-                    color: Color(0xFF313131),
-                    fontFamily: 'Avenir-Bold',
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 80.0,
+            Password(
+              passtitle: 'Confirm password',
+              passhint: 'Enter your confirm password',
+              height: 68.0,
+              onChange: (value) {},
             ),
             Button(
-              buttonName: 'Log In',
+              buttonName: 'Change password',
               color: Color(0xFFF96060),
               onPress: () {},
             ),
