@@ -5,6 +5,7 @@ class SignIn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
       body: Padding(
         padding: const EdgeInsets.all(24.0),
@@ -89,6 +90,31 @@ class SignIn extends StatelessWidget {
                     fontSize: 18.0,
                     color: Color(0xFF313131),
                     fontFamily: 'Avenir-Bold',
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 80.0,
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                TextButton(
+                  onPressed: () {},
+                  style: TextButton.styleFrom(
+                    backgroundColor: Color(0xFFF96060),
+                    padding: EdgeInsets.all(13.0),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(5.0),
+                    ),
+                  ),
+                  child: Text(
+                    'Log In',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18.0,
+                    ),
                   ),
                 ),
               ],
